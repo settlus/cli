@@ -2,8 +2,7 @@ name: Generate Config Doc
 on:
   push:
     paths:
-      - "ignite/config/chain/base/*"
-      - "ignite/config/chain/v*"
+      - "ignite/config/*"
     branches:
       - main
 
