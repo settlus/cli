@@ -80,6 +80,11 @@ To get started, create a blockchain:
 		},
 	}
 
+	commands, err := NewCommands()
+	if err != nil {
+		return nil, nil, err
+	}
+
 	c.AddCommand(
 		NewScaffold(),
 		NewChain(),
@@ -91,6 +96,7 @@ To get started, create a blockchain:
 		NewApp(),
 		NewDoctor(),
 		NewCompletionCmd(),
+		commands,
 	)
 	c.AddCommand(deprecated()...)
 	c.SetContext(ctx)
